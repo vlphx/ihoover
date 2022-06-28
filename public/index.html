@@ -6,22 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Web site created using create-snowpack-app" />
     <link rel="stylesheet" type="text/css" href="/index.css" />
-    <title>Snowpack App</title>
+    <title>Ihoover</title>
   </head>
   <body>
-    <img id="img" src="/logo.svg" />
-    <canvas id="canvas"></canvas>
+    <form id="form">
+      <h3>Dimension de la grille:</h3>
+      <p>Saisir le nombre de carrés sur l'axe x : <input type="number" id="dimensionX"></p>
+      <p>Saisir le nombre de carrés sur l'axe y : <input type="number" id="dimensionY"></p>
+      <h3>Position initiale de l'aspirateur :</h3>
+      <p>Saisir la position de l'aspirateur sur l'axe x : <input type="number" id="initialVacuumPositionX"></p>
+      <p>Saisir la position de l'aspirateur sur l'axe y : <input type="number" id="initialVacuumPositionY"></p>
+      <h3>Choisir l'orientation initiale de l'aspirateur:</h3>
+      
+      <input type="radio" name="orientation" id="orientationN" value="N"><label for="N">Nord</label>
+      <input type="radio" name="orientation" id="orientationE" value="E"><label for="E">Est</label>
+      <input type="radio" name="orientation" id="orientationO" value="O"><label for="O">Ouest</label>
+      <input type="radio" name="orientation" id="orientationS" value="S"><label for="S">Sud</label>
+      <br/><br/>
+      <h2>Instructions:</h2>
+
+      <button type="button" id="addInstructionG">Tourner à Gauche</button>
+      <button type="button" id="addInstructionD">Tourner à Droite</button>
+      <button type="button" id="addInstructionA">Avancer</button>
+
+      <h2 id="showInstructions"></h2>
+      <br/>
+      <button type="submit" >Valider</button>
+    </form>
+    <h1 id="answer"></h1>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script type="module" src="/dist/index.js"></script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
